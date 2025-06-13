@@ -540,6 +540,7 @@ class LLaVA_OneVision(BaseModel):
             model_name,
             device_map="auto",
             overwrite_config=overwrite_config,
+            attn_implementation="sdpa"
         )
         model.eval()
         model.tie_weights()
